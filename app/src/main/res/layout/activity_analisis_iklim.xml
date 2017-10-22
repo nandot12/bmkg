@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.co.imastudio.bmkgapp22W.AnalisisIklim">
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabTextColor="@android:color/white"
+        android:id="@+id/tabs"
+        ></android.support.design.widget.TabLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/textviewtanggal"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="40dp"
+        android:text="21-31 juli 2017"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tabs"/>
+
+
+  <fragment
+      android:layout_below="@+id/textviewtanggal"
+      android:layout_width="match_parent"
+      android:id="@+id/mapiklim"
+      android:name="com.google.android.gms.maps.SupportMapFragment"
+      android:layout_height="200dp"/>
+
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:background="@drawable/backgroundsearch"
+        android:layout_height="25sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/searchprovinsi"
+        android:hint="masukan nama provinsi"
+        android:textSize="12sp"
+        android:layout_below="@+id/textviewtanggal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapiklim"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    android:text="SUHU"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    android:text="25-32"/>
+
+            </LinearLayout> <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Angin"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Barat 14 knot"/>
+
+            </LinearLayout> <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="RH(%)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:text="85"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabsdetail"
+            android:background="@color/colorAccent"></android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pager"></android.support.v4.view.ViewPager>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
